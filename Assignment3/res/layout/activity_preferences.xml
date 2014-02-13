@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black"
+    android:orientation="horizontal" >
+
+    <EditText
+        android:id="@+id/bookAuthor"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textAuthor"
+        android:layout_alignBottom="@+id/textAuthor"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/textAuthor"
+        android:ems="10"
+        android:inputType="text"
+        android:maxLength="70"
+        android:textColor="@android:color/background_light" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/bookName"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bookAuthor"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:inputType="none"
+        android:maxLength="70"
+        android:textColor="@android:color/background_light" />
+
+    <EditText
+        android:id="@+id/bookDesc"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textDesc"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:maxLength="255"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:id="@+id/bCancel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bookAuthor"
+        android:layout_below="@+id/bookDesc"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/background_light"
+        android:text="@string/Cancel" />
+
+    <Button
+        android:id="@+id/bSave"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bCancel"
+        android:layout_alignBottom="@+id/bCancel"
+        android:layout_alignRight="@+id/textName"
+        android:background="@android:color/background_light"
+        android:text="@string/Save" />
+
+    <TextView
+        android:id="@+id/textDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookAuthor"
+        android:layout_marginTop="17dp"
+        android:layout_toLeftOf="@+id/bookAuthor"
+        android:text="@string/textDesc"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:id="@+id/textAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/bookName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/bookAuthor"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bookName"
+        android:layout_alignRight="@+id/textAuthor"
+        android:text="@string/bookName"
+        android:textColor="@android:color/background_light" />
+
+</RelativeLayout>

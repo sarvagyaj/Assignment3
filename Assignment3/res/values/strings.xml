@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Assignment3</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="bPreference">Preferences</string>
+    <string name="bSqlLite">SQLite</string>
+    <string name="bClose">Close</string>
+    <string name="bookName">Android Book Name : </string>
+    <string name="bookAuthor">Android Book Author : </string>
+    <string name="textDesc">Description : </string>
+    <string name="Save">Save</string>
+    <string name="Cancel">Cancel</string>
+
+</resources>

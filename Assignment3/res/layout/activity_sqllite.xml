@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/bGet"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/msg"
+        android:layout_centerVertical="true"
+        android:background="@android:color/background_light"
+        android:text="Get" />
+
+    <TextView
+        android:id="@+id/textDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bSave"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="81dp"
+        android:layout_marginLeft="40dp"
+        android:text="@string/textDesc"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:id="@+id/bSave"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textDesc"
+        android:layout_centerVertical="true"
+        android:background="@android:color/background_light"
+        android:text="@string/Save" />
+
+    <EditText
+        android:id="@+id/msg"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textDesc"
+        android:layout_alignBottom="@+id/textDesc"
+        android:layout_toRightOf="@+id/bSave"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:maxLength="255"
+        android:maxLines="10"
+        android:minLines="5"
+        android:scrollbars="vertical"
+        android:textColor="@android:color/background_light" />
+
+</RelativeLayout>

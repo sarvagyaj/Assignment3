@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/bClose"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="67dp"
+        android:background="@android:color/background_light"
+        android:text="@string/bClose" />
+
+    <Button
+        android:id="@+id/bSqlLite"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bPreference"
+        android:layout_alignBottom="@+id/bPreference"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="34dp"
+        android:background="@android:color/background_light"
+        android:text="@string/bSqlLite" />
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" 
+        android:textColor="@android:color/white"/>
+
+    <Button
+        android:id="@+id/bPreference"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/detail"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="32dp"
+        android:background="@android:color/background_light"
+        android:text="@string/bPreference" />
+
+</RelativeLayout>
