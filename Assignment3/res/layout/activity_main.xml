@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black"
+    android:background="#005856"
     android:orientation="vertical" >
 
     <Button
@@ -28,11 +28,11 @@
 
     <TextView
         android:id="@+id/detail"
-        android:layout_width="fill_parent"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" 
-        android:textColor="@android:color/white"/>
+        android:layout_centerVertical="true"
+        android:textColor="@android:color/white" />
 
     <Button
         android:id="@+id/bPreference"

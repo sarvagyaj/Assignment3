@@ -35,7 +35,6 @@ public class MainActivity extends Activity {
 				.getDefaultSharedPreferences(this);
 		String dateStringSP = prefs.getString("date", null);
 		List<Long> datesSP = new ArrayList<Long>();
-		// datesSP= new ArrayList<String>();
 		if (dateStringSP != null) {
 			List<String> datesSPString = new ArrayList<String>(
 					Arrays.asList(dateStringSP.split(",")));
@@ -50,10 +49,8 @@ public class MainActivity extends Activity {
 		db.open();
 		List<Long> datesSQL = db.readAllDates();
 
+		// merging timestamps from both sources and sorting them
 		merge(datesSP, datesSQL);
-
-		
-		
 
 		bPreference.setOnClickListener(new View.OnClickListener() {
 
@@ -74,15 +71,24 @@ public class MainActivity extends Activity {
 				startActivity(intent);
 			}
 		});
+
+		bClose.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
+		// Inflate the menu, this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
+	// merging timestamps from both sources and sorting them
 	public void merge(List<Long> datesSP, List<Long> datesSQL) {
 		int counterSP = 1;
 		int counterSQL = 1;
@@ -104,8 +110,6 @@ public class MainActivity extends Activity {
 				counterSP++;
 			}
 		}
-
-		
 
 		while (!datesSP.isEmpty() && !datesSQL.isEmpty()) {
 			if (datesSP.get(0) < datesSQL.get(0)) {
